@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 lang: en-US
 title: Tata of Senegal
-email: james.gordon@scholars.aku.edu
+email: james.gordon@scholar.aku.edu
 description:
 baseurl: /portfolio/
 url: 
