@@ -6,7 +6,7 @@ categories:
 tags:
   - experiments
   - tests
-image: images/banner_home.jpg
+image: images/Tata SikaSSO.jpg
 ---
 
 This is my first blog post!
