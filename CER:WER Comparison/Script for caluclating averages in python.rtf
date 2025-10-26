@@ -1,0 +1,83 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Below is a transcription of the python script for averages developed by ChatGPT, as well as part of the prompt used to conjure it.\
+\
+Discussion: Creating a Python script to calculate average CER and WER per model\
+------------------------------------------------------------------------------\
+\
+User requested a script that computes the average Character Error Rate (CER) \
+and Word Error Rate (WER) for each Kraken model from a block of text output.\
+\
+The requirements evolved as follows:\
+\
+1. Initial version \'97 used `re` (regex) and `statistics` modules.\
+2. Second version \'97 removed all imports, using only `.find()` and built-ins.\
+3. Final version \'97 avoided even `.find()`, using only string splitting.\
+\
+Below is the final version of the script that meets all constraints.\
+\
+\
+Final Pure-Python Script (No modules, no find function)\
+-------------------------------------------------------\
+\
+# Paste your text block here\
+text = """\
+[PASTE YOUR TEXT HERE]\
+"""\
+\
+results = \{\}\
+\
+# Split text into lines\
+lines = text.splitlines()\
+\
+for line in lines:\
+    # Only process lines that contain CER/WER results\
+    if "has a cer of:" in line and "wer of:" in line:\
+        # Split around spaces to extract parts\
+        parts = line.split()\
+\
+        # The model name is after 'model_transcriptions/'\
+        model_path = parts[0]  # e.g. 'Two/model_transcriptions/kraken_39_from_pretrain_2_best_urdu/...'\
+        model = model_path.split("/")[2]  # model name is the 3rd element\
+\
+        # Find where the numbers are\
+        # Example snippet: "cer of: 0.21190130624092887 and wer of: 0.6405228758169934"\
+        # We can use split("cer of:") and split("wer of:") in sequence\
+        after_cer = line.split("cer of:")[1]\
+        cer_value_str = after_cer.split("and")[0].strip()\
+        wer_value_str = after_cer.split("wer of:")[1].strip()\
+\
+        cer_value = float(cer_value_str)\
+        wer_value = float(wer_value_str)\
+\
+        # Store\
+        if model not in results:\
+            results[model] = \{"cer": [], "wer": []\}\
+        results[model]["cer"].append(cer_value)\
+        results[model]["wer"].append(wer_value)\
+\
+# Compute and print averages\
+print("Average CER and WER per model:\\n")\
+for model, data in results.items():\
+    cer_list = data["cer"]\
+    wer_list = data["wer"]\
+    avg_cer = sum(cer_list) / len(cer_list)\
+    avg_wer = sum(wer_list) / len(wer_list)\
+    print("Model:", model)\
+    print("  Average CER:", round(avg_cer, 4))\
+    print("  Average WER:", round(avg_wer, 4))\
+    print()\
+\
+\
+Notes:\
+------\
+- The script uses no external modules, regex, or `.find()` function.\
+- It depends solely on string splitting and list indexing.\
+- Replace the `[PASTE YOUR TEXT HERE]` section with your full data block.\
+- It will print each model\'92s average CER and WER clearly.\
+}
