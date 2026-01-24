@@ -1,0 +1,27 @@
+OCR run started at Sun Jan  4 14:37:36 EST 2026
+----------------------------------------
+Processing: Mamadou_LamineDrame_pdfs/Campagne_dans_le_Haut-Sénégal_et_[...]Frey_Henri_bpt6k6550198v.pdf
+No OCR needed. Copying PDF as-is.
+Text extracted: text/Campagne_dans_le_Haut-Sénégal_et_[...]Frey_Henri_bpt6k6550198v.txt
+----------------------------------------
+Processing: Mamadou_LamineDrame_pdfs/Deux_campagnes_au_Soudan_français_[...]Gallieni_Joseph-Simon_bpt6k103420x.pdf
+No OCR needed. Copying PDF as-is.
+Text extracted: text/Deux_campagnes_au_Soudan_français_[...]Gallieni_Joseph-Simon_bpt6k103420x.txt
+----------------------------------------
+Processing: Mamadou_LamineDrame_pdfs/Haut-Sénégal-Niger_(Soudan_français)_Première_série_[...]Delafosse_Maurice_bpt6k103554s.pdf
+No OCR needed. Copying PDF as-is.
+Text extracted: text/Haut-Sénégal-Niger_(Soudan_français)_Première_série_[...]Delafosse_Maurice_bpt6k103554s.txt
+----------------------------------------
+Processing: Mamadou_LamineDrame_pdfs/Haut-Sénégal-Niger_(Soudan_français)_Première_série_[...]Delafosse_Maurice_bpt6k1035644.pdf
+No OCR needed. Copying PDF as-is.
+Text extracted: text/Haut-Sénégal-Niger_(Soudan_français)_Première_série_[...]Delafosse_Maurice_bpt6k1035644.txt
+----------------------------------------
+Processing: Mamadou_LamineDrame_pdfs/Haut-Sénégal-Niger_(Soudan_français)_Première_série_[...]Delafosse_Maurice_bpt6k103565h.pdf
+No OCR needed. Copying PDF as-is.
+Text extracted: text/Haut-Sénégal-Niger_(Soudan_français)_Première_série_[...]Delafosse_Maurice_bpt6k103565h.txt
+----------------------------------------
+Processing: Mamadou_LamineDrame_pdfs/test_output.pdf
+No OCR needed. Copying PDF as-is.
+Text extracted: text/test_output.txt
+OCR run finished at Sun Jan  4 14:37:39 EST 2026
+All PDFs processed. Text files are in the 'text' folder.
