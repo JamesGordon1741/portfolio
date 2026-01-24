@@ -6,7 +6,7 @@ categories:
 tags:
   - experiments
   - tests
-image: images/my-image.jpg
+image: images/Tata sikaSSO.jpg
 ---
 
 In this project, I aimed to answer a pertinent subquestion related to my overall thesis project. Overall, I seek to reconstruct the history of Mahmadou Lamine Dramé, a nineteenth-century Islamic leader from what is now eastern Senegal. My specific research question was, simply put:  
@@ -33,7 +33,7 @@ The French language, which is the language of all the texts, also presents speci
 
 While condensing the number of words and focusing on longer, more distinctive lexical items is one viable approach, fully excluding smaller functional words can become an analytical pitfall in sentence-level analysis. Such words can significantly alter meaning when attached to larger expressions. This consideration motivated my use of a TF-IDF model to automatically identify **bigrams and trigrams**—combined expressions treated as distinct values in my word clouds. For example, expressions such as *"nos relations"* emerged as meaningful units.  
 
-![Word Cloud Placeholder for Cluster 0](images/cluster0_wordcloud.jpg)
+![Word Cloud Placeholder for Cluster 0](images/cluster1_wordcloud.png)
 
 ### Initial Analysis and Pipeline Development
 
@@ -70,7 +70,8 @@ I was particularly interested in the word clouds for **clusters 0 and 2**.
 - **Cluster 0**: notions of total war without negotiation are associated with references to Mahmadou and his various names.  
 - **Cluster 2**: conciliatory and diplomatic—though still militarised—relations are associated with Mahmadou’s regional rival and France’s temporary strategic partner, the “Sultan” Ahmadou.  
 
-![Word Cloud Placeholder for Cluster 0 and 2](images/cluster0_2_wordcloud.jpg)
+![Word Cloud Placeholder for Cluster 0 and 2](images/cluster1_wordcloud.png)
+![Word Cloud Placeholder for Cluster 0 and 2](images/cluster2_wordcloud.png)
 
 These patterns offer coherent interpretive avenues relevant to my thesis concerning the distinct semantic spaces occupied by Mahmadou and Ahmadou in French colonial writings of the period.
 
