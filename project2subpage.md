@@ -1,6 +1,6 @@
 ---
 title: "Mini Project 2: Semantic Analysis of the Campaigns Against Lamine Dramé"
-permalink: /miniproject2/
+permalink: /miniproject/
 layout: page
 image: images/Tata sikaSSO.jpg
 ---
