@@ -29,7 +29,7 @@ The French language, which is the language of all the texts, also presents speci
 
 While condensing the number of words and focusing on longer, more distinctive lexical items is one viable approach, fully excluding smaller functional words can become an analytical pitfall in sentence-level analysis. Such words can significantly alter meaning when attached to larger expressions. This consideration motivated my use of a TF-IDF model to automatically identify **bigrams and trigrams**—combined expressions treated as distinct values in my word clouds. For example, expressions such as *"nos relations"* emerged as meaningful units.  
 
-images/cluster1_wordcloud.png)
+![Cluster 1: Mahmadou]({{site.baseurl}}images/cluster1_wordcloud.png)
 
 ### Initial Analysis and Pipeline Development
 
@@ -43,7 +43,7 @@ My inspiration for the latter phases of the project came primarily from the arti
 
 The first series of clusters proved difficult to interpret, as they lacked inherent labels. To address this, I implemented automatic cluster labelling using TF-IDF feature weights. Even with these improvements, early results remained unsatisfactory: clusters were still dominated by short words and highly frequent verb forms such as *avoir*. Additionally, stop words applied during early stages were inadvertently reintroduced during clustering in initial versions of the code. I therefore introduced stricter token-length thresholds and lemmatisation to collapse variants into base forms.  
 
-(images/cluster_csv_example.jpg)
+![An example of a cluster produced without labels]({{site.baseurl}}/images/cluster_csv_example.jpg)
 
 Following this, I reoriented the analysis around **sentence-level units rather than chunks**, reasoning that sentences offered a more meaningful scale for capturing discourse and attribution. I also implemented a soft-filtering ruleset to group references to Mahmadou (e.g., *Mahmadou*, *Laminé*, and the shorthand *“le marabout”*) in order to focus more closely on my primary actors. This shift required further cleaning and lemmatisation procedures, after which I explored the use of bigrams and trigrams through TF-IDF vectorisation to capture recurring multi-word expressions. This also enabled the construction of **contrastive word clouds**, which highlight terms statistically distinctive to particular clusters, rather than those which appear the most in a corpus. Both standard frequency-based and contrastive word clouds are presented to demonstrate the difference in interpretive value.
 
@@ -66,8 +66,8 @@ I was particularly interested in the word clouds for **clusters 0 and 2**.
 - **Cluster 0**: notions of total war without negotiation are associated with references to Mahmadou and his various names.  
 - **Cluster 2**: conciliatory and diplomatic—though still militarised—relations are associated with Mahmadou’s regional rival and France’s temporary strategic partner, the “Sultan” Ahmadou.  
 
-(images/cluster1_wordcloud.png)
-(images/cluster2_wordcloud.png)
+![Cluster 1: Mahmadou]({{site.baseurl}}images/cluster1_wordcloud.png)
+![Cluster 2: Ahmadou]({{site.baseurl}}images/cluster2_wordcloud.png)
 
 These patterns offer coherent interpretive avenues relevant to my thesis concerning the distinct semantic spaces occupied by Mahmadou and Ahmadou in French colonial writings of the period.
 
